@@ -10,9 +10,9 @@ jar包存放路径：
 ```
 maven-repository\com\jimmywan\javafakedata\0.0.1-SNAPSHOT
 ```
-# 示例
+# 示例Demo
 
-```
+```java
         String usName = FakeString.getUsLastName();
         System.out.println(usName);
 
@@ -21,18 +21,6 @@ maven-repository\com\jimmywan\javafakedata\0.0.1-SNAPSHOT
 
         String string = FakeString.getLastName();
         System.out.println(string);
-   
-        String string = FakeString.getUsFirstName();
-        System.out.println(string);
- 
-        String usName = FakeString.getUsLastName();
-        System.out.println(usName);
-
-        String usName = FakeString.getUsName();
-        System.out.println(usName);
-
-        String usName = FakeString.getPassword();
-        System.out.println(usName);
 
         String string = FakeString.getEmail();
         System.out.println(string);
@@ -58,5 +46,23 @@ maven-repository\com\jimmywan\javafakedata\0.0.1-SNAPSHOT
         String string = FakeString.getIpv6();
         System.out.println(string);
 
-
 ```
+## Author
+👤 Jimmy Wan
+
+Twitter: @kalaka914
+
+Github: @JimmyWan2022
+
+## Show your support
+
+Please ⭐️ this repository if this project helped you!
+
+
+
+## 📝 License
+
+Copyright © 2022 [Jimmy Wan](https://github.com/JimmyWan2022).<br />
+This project is [MIT](https://github.com/JimmyWan2022/javafakedata) licensed.
+
+---
