@@ -1,7 +1,7 @@
 # javafakedata假数据生成器
 A library for generating fake data such as names, addresses,phone numbers,ipv4,ipv6,email,url
 
-jar包，用于生成假数据，例如人名，地址，手机号，ipv4,ipv6,邮箱,url
+jar包，用于生成假数据，例如人名，地址，手机号，ipv4，ipv6，邮箱，url
 
 # 安装教程
 要使用 javafakedata，你需要安装 Java 环境，然后下载 javafakedata 的 jar 包，然后将其添加到你的 classpath 中。
