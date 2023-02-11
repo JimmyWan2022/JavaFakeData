@@ -8,7 +8,7 @@ public class FakeCar {
     private int year;
     private int price;
     private  int insurance;//day
-    private Image image;
+//    private Image image;
 
     private String company;
 

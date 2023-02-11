@@ -115,16 +115,11 @@ class FakeStringTest {
         System.out.println(string);
     }
     @Test
-    void getIpv6() {
+    void getIpv6() throws IOException {
         String string = FakeString.getIpv6();
         System.out.println(string);
     }
 
-    @Test
-    void getUsername() {
-        String string = FakeString.getUsername();
-        System.out.println(string);
-    }
 
 
 

@@ -104,40 +104,7 @@ public class FakeString {
         return string;
     }
 
-    public static String readFile(String fileName) throws IOException {
-        long timeStart = System.currentTimeMillis();
-        //统计文件行数
-        File file1 = new File(fileName);
-        FileReader in = new FileReader(file1);
-        LineNumberReader reader1 = new LineNumberReader(in);
-        reader1.skip(Long.MAX_VALUE);
-        int maxLines = reader1.getLineNumber();
-        reader1.close();
-        in.close();
-//        System.out.println("文件行数:"+maxLines);
-        File file = new File(fileName);//文件路径
-        FileReader fileReader = new FileReader(file);
-        LineNumberReader reader = new LineNumberReader(fileReader);
-        Random random = new Random();
-        int number = random.nextInt(maxLines);//设置指定行数
 
-        String txt = "";
-        int lines = 0;
-        while (txt != null) {
-            lines++;
-            txt = reader.readLine();
-            if (lines == number) {
-                break;
-            }
-        }
-        reader.close();
-        fileReader.close();
-        long timeEnd = System.currentTimeMillis();
-//        System.out.println("总共花费：" + (timeEnd - timeStart) + "ms");
-//        log.info("get Random Line：{}", txt);
-        return txt;
-
-    }
 
     public static String getEmail() {
         String string = getEmail(6, 9);
@@ -233,23 +200,36 @@ public class FakeString {
         return randomStr;
     }
     //TODO
-    public static String getIpv6() {
-        Generex generex = new Generex("(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))");
-        // Generate random String
-        String randomStr = generex.random();
-        log.info("{}:{}", Thread.currentThread().getStackTrace()[2].getMethodName(), randomStr);
-        return randomStr;
+    public static String getIpv6() throws IOException {
+        String fileName = "src/main/java/com/jimmywan/javafakedata/Data/random-lists/ipv6.txt";
+        String string = readFile(fileName);
+        log.info("{}:{}", Thread.currentThread().getStackTrace()[2].getMethodName(), string);
+        return string;
     }
-    //TODO
-    public static String getUsername() {
-        Generex generex = new Generex("[a-zA-Z][a-zA-Z0-9_]{4,15}");
-        // Generate random String
-        String randomStr = generex.random();
-        log.info("{}:{}", Thread.currentThread().getStackTrace()[2].getMethodName(), randomStr);
-        return randomStr;
+    public static String getCarBrand()throws IOException {
+        String fileName = "src/main/java/com/jimmywan/javafakedata/Data/random-lists/car-brands.txt";
+        String string = readFile(fileName);
+        log.info("{}:{}", Thread.currentThread().getStackTrace()[2].getMethodName(), string);
+        return string;
     }
-
-
+    public static String getDogName()throws IOException {
+        String fileName = "src/main/java/com/jimmywan/javafakedata/Data/random-lists/dog-names.txt";
+        String string = readFile(fileName);
+        log.info("{}:{}", Thread.currentThread().getStackTrace()[2].getMethodName(), string);
+        return string;
+    }
+    public static String getMacAddress()throws IOException {
+        String fileName = "src/main/java/com/jimmywan/javafakedata/Data/random-lists/mac-addresses.txt";
+        String string = readFile(fileName);
+        log.info("{}:{}", Thread.currentThread().getStackTrace()[2].getMethodName(), string);
+        return string;
+    }
+    public static String getWebsite()throws IOException {
+        String fileName = "src/main/java/com/jimmywan/javafakedata/Data/random-lists/websites.txt";
+        String string = readFile(fileName);
+        log.info("{}:{}", Thread.currentThread().getStackTrace()[2].getMethodName(), string);
+        return string;
+    }
 
     public static int getNum(int start, int end) {
         return (int) (Math.random() * (end - start + 1) + start);
@@ -326,6 +306,49 @@ public class FakeString {
         String second = String.valueOf(getNum(11, 150)) + "号";
         String third = "-" + getNum(1, 20) + "-" + getNum(1, 10);
         return first + second + third;
+    }
+    public static String getNation() throws IOException {
+        String fileName = "src/main/java/com/jimmywan/javafakedate/Data/country/countries.txt";
+        String string = readFile(fileName);
+        log.info("{}:{}", Thread.currentThread().getStackTrace()[2].getMethodName(), string);
+        return string;
+    }
+    public static String getCountry() throws IOException {
+        return getNation();
+    }
+    public static String readFile(String fileName) throws IOException {
+        long timeStart = System.currentTimeMillis();
+        //统计文件行数
+        File file1 = new File(fileName);
+        FileReader in = new FileReader(file1);
+        LineNumberReader reader1 = new LineNumberReader(in);
+        reader1.skip(Long.MAX_VALUE);
+        int maxLines = reader1.getLineNumber();
+        reader1.close();
+        in.close();
+//        System.out.println("文件行数:"+maxLines);
+        File file = new File(fileName);//文件路径
+        FileReader fileReader = new FileReader(file);
+        LineNumberReader reader = new LineNumberReader(fileReader);
+        Random random = new Random();
+        int number = random.nextInt(maxLines);//设置指定行数
+
+        String txt = "";
+        int lines = 0;
+        while (txt != null) {
+            lines++;
+            txt = reader.readLine();
+            if (lines == number) {
+                break;
+            }
+        }
+        reader.close();
+        fileReader.close();
+        long timeEnd = System.currentTimeMillis();
+//        System.out.println("总共花费：" + (timeEnd - timeStart) + "ms");
+//        log.info("get Random Line：{}", txt);
+        return txt;
+
     }
 
 
