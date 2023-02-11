@@ -63,6 +63,6 @@ Please ⭐️ this repository if this project helped you!
 ## 📝 License
 
 Copyright © 2022 [Jimmy Wan](https://github.com/JimmyWan2022).<br />
-This project is [MIT](https://github.com/JimmyWan2022/javafakedata) licensed.
+This project is [MIT](https://github.com/JimmyWan2022/javafakedata/blob/master/LICENSE) licensed.
 
 ---
