@@ -56,8 +56,9 @@ Github: @JimmyWan2022
 
 ## Show your support
 
-Please ⭐️ this repository if this project helped you!
+<a href="https://www.buymeacoffee.com/jimmywan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
+Please ⭐️ this repository if this project helped you!
 
 
 ## 📝 License
